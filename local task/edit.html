@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <!-- Firebase -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyDPGoCqebhPVLH-AKAKePeib-t-1YWAPow",
+        authDomain: "saylani-attendance.firebaseapp.com",
+        databaseURL: "https://saylani-attendance.firebaseio.com",
+        projectId: "saylani-attendance",
+        storageBucket: "saylani-attendance.appspot.com",
+        messagingSenderId: "953787602898",
+        appId: "1:953787602898:web:d4b2c951ee804e2c"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+<body>
+    <div>
+    <p>
+        <label for=""> Name : &nbsp;&nbsp;&nbsp;</label>
+        <input type="text" id="name"> 
+    </p>
+        
+    
+    <p>
+        <label for="">F Name :</label>
+        <input type="text" id="fname"> 
+    </p>
+    <p>
+        <label for="">Roll No :</label>
+        <input type="text" id="roll">
+    </p>
+    </div>
+    <div>
+        <div id="div">
+
+        </div>
+
+    </div>
+    
+</body>
+<script>
+    let x = localStorage.getItem(`firebase_id`);
+    x = JSON.parse(x)
+
+
+  
+
+    let database = firebase.database().ref(`/`);
+
+    
+    let save = document.createElement(`input`);
+        save.setAttribute(`type`,`button`);
+        save.setAttribute(`value`,`Save`);
+        save.setAttribute(`id`,`del`);
+
+    let div = document.getElementById(`div`);
+    div.appendChild(save)
+
+    save.addEventListener("click", () => {
+        let name = document.getElementById(`name`).value  
+        let fname = document.getElementById(`fname`).value 
+        let roll = document.getElementById(`roll`).value 
+
+      
+        database.child(`Student/` + x).update(
+        {    
+        name: name,
+        fname : fname,
+        roll : roll
+            
+        })
+        window.location.href = `view.html`
+
+    });
+
+
+    
+
+
+
+
+
+
+
+</script>

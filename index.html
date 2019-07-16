@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+
+    <!-- Css Link -->
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- Load an icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- SLider Links  -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Firebase -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyDPGoCqebhPVLH-AKAKePeib-t-1YWAPow",
+        authDomain: "saylani-attendance.firebaseapp.com",
+        databaseURL: "https://saylani-attendance.firebaseio.com",
+        projectId: "saylani-attendance",
+        storageBucket: "saylani-attendance.appspot.com",
+        messagingSenderId: "953787602898",
+        appId: "1:953787602898:web:d4b2c951ee804e2c"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
+
+
+
+    
+    
+
+</head>
+<body>
+    <!-- Main Flex Box -->
+    <div class="main_box">
+     
+        <!-- Navigation -->
+        <div class="topnav" id="myTopnav">
+            <a href="#" onclick="home()" ><i class="fa fa-fw fa-home"></i> Home</a> 
+            <a href="#" onclick="about()"><i class="fa fa-fw fa-user"></i> About Us</a> 
+            <a href="#" onclick="attendance()"><i class="fa fa-fw fa-user"></i>Attendance </a> 
+            <a href="#" onclick="contact()"><i class="fa fa-fw fa-envelope"></i> Contact Us</a> 
+            <a href="#" style="float: right;"><i class="fa fa-fw fa-user" ></i> Login </a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <div id="home">
+        <!-- Banner After Navigation -->
+
+        <img src="images/mass1.jpg" style="width:100%;margin-top: 20px">
+
+        <!-- Slide Show -->
+        <div class="w3-content w3-section" style="max-width:600px;margin:1% 1%;display: inline-block">
+            <img class="mySlides" src="images/alimugal.jpg" style="width:100%">
+            <img class="mySlides" src="images/massTeam.jpg" style="width:100%">
+            <img class="mySlides" src="images/C.E.o.jpg" style="width:100%">
+        </div>
+
+        <!-- Attendance Button -->
+
+        <div style="float:right; display: inline-block; margin: 20% 14% auto ">
+            <button class="btn" onclick="attend()"><i class="fa fa-user"></i> Attendance</button>
+        </div>   
+        
+        <!-- Sticky Icons  -->
+        <div class="icon-bar">
+            <a href="#" class="facebook"><i class="fa fa-facebook" ></i></a> 
+            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+            <a href="#" class="google"><i class="fa fa-google"></i></a> 
+            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
+        </div>
+        </div>
+
+
+
+        <!-- About Us Page UI -->
+        <div id="about">
+            <div>
+                <img src="images/mass1.jpg" style="width:100%;margin-top: 2%;">     
+            </div>
+
+            <div style="display: inline" >
+                <img src="images/massTeam.jpg" id="about_img" >     
+            </div>
+            <div  id="about_info" >
+                
+                   <span style="font-weight: bolder; font-size: 20px;"> Saylani Mass IT Training Program. </span> </br></br>
+
+                    To Train 10 Thousand Developers in Pakistan Living in an era driven by information technology 
+                    makes investing in our youth through computer programing education necessary. Our vision is to make Pakistan a Global Software Development
+                    Hub with the brightest IT minds. aylani launched its Saylani Mass I.T (SMIT) Program. SMIT offers expert
+                    training in the areas of Mobile and web application development, CCNA, graphic designing, computer
+                    based accountancy etc. we aim to produce a total of 10,000 skilled software developers on a national level.
+                    Not only will this generate numerous jobs but will also inadvertently boost our annual GDP by 1 billion dollars.
+                    We have collaborated with world-renowned organizations for SMIT that include Microsoft, CISCO, SDC, Viftech and City Guild UK
+                
+            </div>
+        </div>
+
+
+        <!-- Contact Us Page UI-->
+        <div id="contact">
+
+            <div>
+                <img src="images/mass1.jpg" style="width:100%;margin-top: 2%;">     
+            </div>
+        
+            <div class="container">
+                <div style="text-align:center">
+                    <h2>Contact Us</h2>
+                </div>
+                <div class="row">
+                    <div class="column">
+                    <img src="images/massTeam.jpg" style="width:100%">
+                    </div>
+                    <div class="column" style="height: 130px;">
+                    <form action="#" style="height: 130px;">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        <label for="lname">Email</label>
+                        <input type="email" id="email" name="lastname" placeholder="Your Email..">
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:140px"></textarea>
+                        <input type="submit" value="Submit">
+                    </form>
+                    </div>
+                </div>
+            </div>
+                      
+        </div>
+
+
+        <!-- Attendance Page -->
+        <div id="attendance">
+            <div>
+                <img src="images/mass1.jpg" style="width:100%;margin-top: 2%;">     
+            </div>
+            <div class="flex" style="text-align: center;" >
+                <div onclick="cc()" id="cc">
+                    <p style="height: 40px;width: 100%; background-color: #CF1A70"></p>
+                    CLOUD NATIVE
+                </div>
+                <div onclick="bc()" id="bc"> 
+                    <p style="height: 40px;width: 100%; background-color: #f6ca3e"></p>
+                    BLOCKCHAIN
+                </div>
+                <div onclick="ai()" id="ai" style="display: inline;float: right;color: #1D2C51;font-weight: bold"  >
+                    <p style="height: 40px;width: 100%; background-color: #1D2C51"></p>
+                    ARTIFICIAL INTELLIGENCE
+                </div>    
+                    
+            </div>
+
+
+        </div>
+        
+        <!-- Student Attendance Card -->
+
+        <div id="card">
+            <div>
+                <img src="images/mass1.jpg" style="width:100%;margin-top: 2%;">     
+            </div>
+            <!-- For Cretae Class -->
+
+            <div id="create"  style="margin: 5% 5%; display: none;">
+                <input type="text" name="Class Name" id="class" placeholder="Class Name">
+                <input type="date"  name="date" id="date" placeholder="Date"> 
+                <input type="time"  name="time" id="time" placeholder="Time"> 
+                <input type="text"  name="Batch" id="batch" placeholder="Batch"> 
+                <input type="button" id="btn" value="Create Class" onclick="create_Class()">
+            </div>
+
+
+            <div id="add_New"  style="margin: 5% 5%;display: none" >    
+                <input type="text" name="Student Name" id="stud_name" placeholder="Student Name"> 
+                <input type="text"  name="Father Name" id="stud_fName"  placeholder="Father Name"> 
+                <input type="text"  name="Class" id="stud_Class" placeholder="Class Name"> 
+                <input type="text"  name="Batch" id="stud_batch" placeholder="Batch"> 
+                <input type="button" id="add1" value="Add" onclick=" add_Student()">
+            </div>
+            <!-- Add Student Button -->
+
+            <div style="margin-top:5%;" id="buttons">
+                <input type="button" onclick="add()"  id="add_student"  value="Add Student">
+                <input type="button" onclick="create()"  id="add_student" value="Create Class">
+            
+            </div>
+    
+            <!-- Attendance Card -->
+
+            <div id="card_box">
+                <div style="float: right; border: 2px solid dodgerblue;padding: 10px;margin-left: 5%;">
+                    <img src="images/Saylani-logo.png" style="vertical-align: text-top" width="20%" alt="">
+                    <span style="float: right;">Attendance</span>
+                    <p style="height: 40px;width: 100%;text-align: center;font-weight: bold;color: white; background-color: dodgerblue">Admit Card</p>
+                    <img src="images/C.E.o.jpg" style="vertical-align: text-top;" width="40%" alt="">
+                        
+                    <div id="form">
+                    
+                        <input type="text" name="Student Name" id="name" placeholder="Student Name"> </br>
+                        <input type="text"  name="Father Name" id="fName"  placeholder="Father Name"> </br>
+                        <input type="text"  name="Class" id="class" placeholder="Class"> </br>
+                        <input type="text"  name="Batch" id="batch" placeholder="Batch"> 
+
+                    </div>
+                </div>
+                <div  class="search-container" style="margin:5%  15%">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="button"><i class="fa fa-search"></i></button>
+                </div>
+
+                
+                
+            </div>
+                    
+    
+        </div>
+               
+  
+  
+    </div>
+
+    
+</body>
+<script src="js/index.js"></script>
+</html>

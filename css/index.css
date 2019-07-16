@@ -1,0 +1,484 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Mian Box */
+.main_box {
+    flex-wrap: nowrap;
+    border: 1px solid #035856;
+    border-radius: 10px;
+    margin: 10px auto;
+    height: 870px;
+    width: 80%;    
+    background-color: #e0e9ec;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #035856;
+    border-top-left-radius: 10px;
+}
+  
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 16px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+.topnav a:hover {
+    color: #009c7f;
+}
+
+  
+.topnav .icon {
+    display: none;
+}
+  
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+}
+  
+@media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+}
+  
+/* Slides */
+.mySlides {display:none;}
+
+
+/* Attendance Button */
+
+.btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+    background-color: RoyalBlue;
+}
+
+
+/* Social Links */
+.icon-bar {
+    top: 10%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    float: right;
+    /* display: inline; */
+    margin-top: -19%;
+  }
+  
+  .icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .icon-bar a:hover {
+    background-color: #000;
+  }
+  
+  .facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .google {
+    background: #dd4b39;
+    color: white;
+  }
+  
+  .linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .youtube {
+    background: #bb0000;
+    color: white;
+  }
+  
+  .content {
+    margin-left: 75px;
+    font-size: 30px;
+}
+
+/* About Us Page CSS */
+#about{
+    display: none;
+}
+#about_img{
+  width: 50%; margin:5% 1%;
+}
+#about_info{
+  float: right; 
+  width: 430px; 
+  text-align: justify;
+  margin-top: 5%;
+   margin-right: 2%;
+   line-height: 22px;
+}
+
+@media screen and (max-width: 780px) {
+  body{
+    margin: 0px auto;
+  }
+  .main_box{
+    height: 1060px;
+  }
+  #about_img {
+    width: 100%;
+  }
+  #about_info{
+    width: 100%;
+    padding: 2% 5%;
+    height: 370px;
+  }
+  #about_info p {
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 1300px) {
+  
+  .main_box{
+    height: 1160px;
+  }
+  #about_img {
+    width: 100%;
+    margin: 0px auto;
+  }
+  #about_info{
+    width: 100%;
+    margin: 2% auto; 
+    height: 100%;
+    padding: 2%;
+  }
+ 
+}
+
+
+
+/* Contact US Page CSS */
+
+#contact{
+  display: none;
+}
+
+.container{
+  height: 400px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+.column input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  resize: vertical;
+}
+
+.column input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  resize: vertical;
+}
+
+.column input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.column input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  /* margin-top: 6px; */
+  padding-left: 30px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+  
+
+
+/* Attendance */
+
+#attendance{
+  display: none;
+}
+
+.flex {
+  display: inline;
+
+}
+
+.flex div {
+  width: 25%;
+  height: 180px;
+  background-color: #f1f1f1;
+  margin: 5% 5%  0px 3%;
+  cursor: pointer;
+}
+
+
+/* Attendance Card */
+
+#card{
+  display: none;
+}
+
+#form input{
+  outline: 0;
+  border-width: 0 0 1px;
+  border-color: dodgerblue; 
+  margin-top: 6px;
+  height: 30px;
+
+}
+#btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+/* Darker background on mouse-over */
+#btn:hover {
+  background-color: RoyalBlue;
+}
+
+#create input{
+  outline: 0;
+  border-width: 0 0 1px;
+  border-color: dodgerblue; 
+  margin-top: 6px;
+  height: 40px;
+
+}
+#cc{
+  display: inline;
+  float: right;
+  color: #CF1A70;
+  font-weight: bold"
+}
+#bc{
+  display: inline;
+  float: right;
+  color: #f6ca3e;
+  font-weight: bold"
+}
+
+@media screen and (max-width: 780px) {
+  body{
+    margin: 0px auto;
+  }
+  
+  #cc{
+    display: block;
+    width: 100%;
+    margin: 20px auto
+  }
+
+  #bc{
+    display: block;
+    width: 100%;
+    margin:20px auto
+  }
+  #ai{
+    display: block;
+    width: 100%;
+    margin: 20px auto
+  }
+}
+
+
+/* Search Bar */
+.search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.search-container button:hover {
+  background: #ccc;
+}
+.search-container {
+  float: right;
+}
+.search-container input[type=text] {
+  padding: 6px;
+  font-size: 17px;
+  border: none;
+}
+
+/* Add Student */
+#add_student {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 4px;
+  padding: 8px;
+}
+
+/* Darker background on mouse-over */
+#add_student:hover {
+  background-color: RoyalBlue;
+}
+#add_New input{
+  outline: 0;
+  border-width: 0 0 1px;
+  border-color: dodgerblue; 
+  margin-top: 6px;
+  height: 40px;
+}
+
+#add1 {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 4px;
+  padding: 8px;
+}
+
+/* Darker background on mouse-over */
+#add1:hover {
+  background-color: RoyalBlue;
+}
+
+
+#add_student{
+  float: right;
+  margin-right: 30px;
+
+}
+#card_box{
+  width: 460px;
+  margin-top: 5%;
+}
+
+#form input {
+float: right;
+}
+#form{
+  float: right;
+}
+
+
+@media screen and (max-width: 780px) {
+  body{
+    margin: 0px auto;
+  }
+  #add_student{
+    width: 100%;
+    float: left;
+    margin: 10px auto;
+  }
+  #card_box{
+    width: 100%;
+    margin: 30px auto 0px -10px;
+  }
+  #card_box div img{
+    width: 100%;
+    margin: 0px auto;
+  }
+
+  #card_box div img {
+    width: 100%;
+    margin: 0px auto;
+  }
+  
+  #form input {
+    width: 100%;
+    margin: 10px auto;
+  }
+  
+
+  .search-container input{
+    width: 100%;
+    margin: 0px auto;
+  }
+
+  .search-container button{
+    width: 100%;
+    margin: 0px auto;
+  }
+
+  #add_New input{
+    display: block;
+    width: 100%;
+    
+  }
+  
+}
